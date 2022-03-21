@@ -36,6 +36,8 @@
             this.lblBankAccount = new System.Windows.Forms.Label();
             this.txtBetAmount = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.lblDollarSign = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rtbDice
@@ -89,9 +91,9 @@
             this.lblBankAccount.AutoSize = true;
             this.lblBankAccount.Location = new System.Drawing.Point(372, 15);
             this.lblBankAccount.Name = "lblBankAccount";
-            this.lblBankAccount.Size = new System.Drawing.Size(46, 13);
+            this.lblBankAccount.Size = new System.Drawing.Size(25, 13);
             this.lblBankAccount.TabIndex = 6;
-            this.lblBankAccount.Text = "$100.00";
+            this.lblBankAccount.Text = "100";
             // 
             // txtBetAmount
             // 
@@ -103,17 +105,37 @@
             // 
             // lblOutput
             // 
-            this.lblOutput.Location = new System.Drawing.Point(249, 37);
+            this.lblOutput.Location = new System.Drawing.Point(284, 37);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(213, 158);
+            this.lblOutput.Size = new System.Drawing.Size(113, 158);
             this.lblOutput.TabIndex = 8;
             this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDollarSign
+            // 
+            this.lblDollarSign.AutoSize = true;
+            this.lblDollarSign.Location = new System.Drawing.Point(362, 15);
+            this.lblDollarSign.Name = "lblDollarSign";
+            this.lblDollarSign.Size = new System.Drawing.Size(13, 13);
+            this.lblDollarSign.TabIndex = 9;
+            this.lblDollarSign.Text = "$";
+            // 
+            // lblError
+            // 
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(15, 153);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(228, 16);
+            this.lblError.TabIndex = 10;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 210);
+            this.ClientSize = new System.Drawing.Size(413, 210);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.lblDollarSign);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.txtBetAmount);
             this.Controls.Add(this.lblBankAccount);
@@ -139,6 +161,8 @@
         private System.Windows.Forms.Label lblBankAccount;
         private System.Windows.Forms.TextBox txtBetAmount;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Label lblDollarSign;
+        private System.Windows.Forms.Label lblError;
     }
 }
 

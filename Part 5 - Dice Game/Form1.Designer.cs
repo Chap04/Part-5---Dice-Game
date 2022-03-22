@@ -1,6 +1,6 @@
 ﻿namespace Part_5___Dice_Game
 {
-    partial class Form1
+    partial class DiceGame
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.lblError.TabIndex = 10;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // DiceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,8 +155,8 @@
             this.Controls.Add(this.lblBankAccountLabel);
             this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.rtbDice);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "DiceGame";
+            this.Text = "Part 5 - Dice Game";
             this.ResumeLayout(false);
             this.PerformLayout();
 

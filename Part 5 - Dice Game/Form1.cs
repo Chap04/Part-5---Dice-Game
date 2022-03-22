@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Part_5___Dice_Game
 {
-    public partial class Form1 : Form
+    public partial class DiceGame : Form
     {
-        public Form1()
+        public DiceGame()
         {
             InitializeComponent();
         }

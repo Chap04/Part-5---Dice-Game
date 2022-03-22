@@ -22,119 +22,22 @@ namespace Part_5___Dice_Game
         double betAmount;
         double bankAccount;
         double bankAccountRun;
-        double newAccountTotal;
         double payReturn;
         
         private void btnRoll_Click(object sender, EventArgs e)
         {
             bankAccount = double.Parse(lblBankAccount.Text);
-            die1 = generator1.Next(1, 7);
+            
             if (double.TryParse(txtBetAmount.Text, out betAmount))
             {
-                switch (die1)
-                {
-                    case 1:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |                    |\n" +
-                        "  |          O       |\n" +
-                        "  |                    |\n" +
-                        "  |__________|");
-                        break;
-                    case 2:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |      O            |\n" +
-                        "  |                    |\n" +
-                        "  |            O     |\n" +
-                        "  |__________|");
-                        break;
-                    case 3:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |     O            |\n" +
-                        "  |         O        |\n" +
-                        "  |             O    |\n" +
-                        "  |__________|");
-                        break;
-                    case 4:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                    case 5:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |        O         |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                    default:
-                        rtbDice.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |   O       O    |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                }
+                die1 = generator1.Next(1, 7);
+                DrawDie(die1, rtbDice);
+                
 
                 die2 = generator1.Next(1, 7);
-                switch (die2)
-                {
-                    case 1:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |                    |\n" +
-                        "  |          O       |\n" +
-                        "  |                    |\n" +
-                        "  |__________|");
-                        break;
-                    case 2:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |      O            |\n" +
-                        "  |                    |\n" +
-                        "  |            O     |\n" +
-                        "  |__________|");
-                        break;
-                    case 3:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                    |\n" +
-                        "  |     O            |\n" +
-                        "  |         O        |\n" +
-                        "  |             O    |\n" +
-                        "  |__________|");
-                        break;
-                    case 4:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                    case 5:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |        O         |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                    default:
-                        rtbDice2.Text = ("  __________\n" +
-                        "  |                   |\n" +
-                        "  |   O       O    |\n" +
-                        "  |   O       O    |\n" +
-                        "  |   O       O    |\n" +
-                        "  |__________|");
-                        break;
-                }
+                DrawDie(die2, rtbDice2);
+                
+
                 if (betAmount <= bankAccount && betAmount > 0)
                 {
                     bankAccountRun = bankAccount - betAmount;
@@ -163,6 +66,67 @@ namespace Part_5___Dice_Game
             }
             
         }
+
+
+
+
+
+
+        private void DrawDie(int roll, RichTextBox textBox)
+        {
+            switch (roll)
+            {
+                case 1:
+                    textBox.Text = ("  __________\n" +
+                    "  |                    |\n" +
+                    "  |                    |\n" +
+                    "  |          O       |\n" +
+                    "  |                    |\n" +
+                    "  |__________|");
+                    break;
+                case 2:
+                    textBox.Text = ("  __________\n" +
+                    "  |                    |\n" +
+                    "  |      O            |\n" +
+                    "  |                    |\n" +
+                    "  |            O     |\n" +
+                    "  |__________|");
+                    break;
+                case 3:
+                    textBox.Text = ("  __________\n" +
+                    "  |                    |\n" +
+                    "  |     O            |\n" +
+                    "  |         O        |\n" +
+                    "  |             O    |\n" +
+                    "  |__________|");
+                    break;
+                case 4:
+                    textBox.Text = ("  __________\n" +
+                    "  |                   |\n" +
+                    "  |   O       O    |\n" +
+                    "  |                   |\n" +
+                    "  |   O       O    |\n" +
+                    "  |__________|");
+                    break;
+                case 5:
+                    textBox.Text = ("  __________\n" +
+                    "  |                   |\n" +
+                    "  |   O       O    |\n" +
+                    "  |        O         |\n" +
+                    "  |   O       O    |\n" +
+                    "  |__________|");
+                    break;
+                default:
+                    textBox.Text = ("  __________\n" +
+                    "  |                   |\n" +
+                    "  |   O       O    |\n" +
+                    "  |   O       O    |\n" +
+                    "  |   O       O    |\n" +
+                    "  |__________|");
+                    break;
+            }
+        }
+
 
         private void lblBankAccount_Click(object sender, EventArgs e)
         {

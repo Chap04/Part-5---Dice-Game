@@ -24,8 +24,10 @@ namespace Part_5___Dice_Game
         double bankAccountRun;
         double newAccountTotal;
         double payReturn;
+        
         private void btnRoll_Click(object sender, EventArgs e)
         {
+            bankAccount = double.Parse(lblBankAccount.Text);
             die1 = generator1.Next(1, 7);
             if (double.TryParse(txtBetAmount.Text, out betAmount))
             {
@@ -135,6 +137,7 @@ namespace Part_5___Dice_Game
                 }
                 if (betAmount <= bankAccount && betAmount > 0)
                 {
+                    bankAccountRun = bankAccount - betAmount;
                     if (die1 == die2)
                     {
                         payReturn = betAmount * 2;
@@ -147,13 +150,23 @@ namespace Part_5___Dice_Game
                         bankAccount = (bankAccountRun + payReturn);
                         lblBankAccount.Text = bankAccount + "";
                     }
+                    lblError.Text = ("");
                 }
                 else
                 {
-                    lblError.Text = ($"Please enter a valid bet amount. (Between $0 and {bankAccount}");
+                    lblError.Text = ($"Please enter a valid bet amount. (Between $0 and ${bankAccount}");
                 }
             }
+            else
+            {
+                lblError.Text = ($"Please enter a valid numerical bet amount. (Between $0 and ${bankAccount}");
+            }
             
+        }
+
+        private void lblBankAccount_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }

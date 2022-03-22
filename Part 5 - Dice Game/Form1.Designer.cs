@@ -51,18 +51,22 @@
             // 
             // btnRoll
             // 
-            this.btnRoll.Location = new System.Drawing.Point(91, 172);
+            this.btnRoll.BackColor = System.Drawing.Color.Black;
+            this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoll.ForeColor = System.Drawing.Color.White;
+            this.btnRoll.Location = new System.Drawing.Point(86, 201);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 23);
             this.btnRoll.TabIndex = 1;
             this.btnRoll.Text = "Roll";
-            this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.UseVisualStyleBackColor = false;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
             // lblBankAccountLabel
             // 
             this.lblBankAccountLabel.AutoSize = true;
-            this.lblBankAccountLabel.Location = new System.Drawing.Point(288, 15);
+            this.lblBankAccountLabel.ForeColor = System.Drawing.Color.White;
+            this.lblBankAccountLabel.Location = new System.Drawing.Point(249, 15);
             this.lblBankAccountLabel.Name = "lblBankAccountLabel";
             this.lblBankAccountLabel.Size = new System.Drawing.Size(78, 13);
             this.lblBankAccountLabel.TabIndex = 2;
@@ -71,6 +75,7 @@
             // lblBetInstructions
             // 
             this.lblBetInstructions.AutoSize = true;
+            this.lblBetInstructions.ForeColor = System.Drawing.Color.White;
             this.lblBetInstructions.Location = new System.Drawing.Point(12, 133);
             this.lblBetInstructions.Name = "lblBetInstructions";
             this.lblBetInstructions.Size = new System.Drawing.Size(81, 13);
@@ -89,14 +94,18 @@
             // lblBankAccount
             // 
             this.lblBankAccount.AutoSize = true;
-            this.lblBankAccount.Location = new System.Drawing.Point(372, 15);
+            this.lblBankAccount.ForeColor = System.Drawing.Color.White;
+            this.lblBankAccount.Location = new System.Drawing.Point(342, 15);
             this.lblBankAccount.Name = "lblBankAccount";
             this.lblBankAccount.Size = new System.Drawing.Size(25, 13);
             this.lblBankAccount.TabIndex = 6;
             this.lblBankAccount.Text = "100";
+            this.lblBankAccount.Click += new System.EventHandler(this.lblBankAccount_Click);
             // 
             // txtBetAmount
             // 
+            this.txtBetAmount.BackColor = System.Drawing.Color.Black;
+            this.txtBetAmount.ForeColor = System.Drawing.Color.White;
             this.txtBetAmount.Location = new System.Drawing.Point(110, 130);
             this.txtBetAmount.Name = "txtBetAmount";
             this.txtBetAmount.Size = new System.Drawing.Size(133, 20);
@@ -114,7 +123,8 @@
             // lblDollarSign
             // 
             this.lblDollarSign.AutoSize = true;
-            this.lblDollarSign.Location = new System.Drawing.Point(362, 15);
+            this.lblDollarSign.ForeColor = System.Drawing.Color.White;
+            this.lblDollarSign.Location = new System.Drawing.Point(323, 15);
             this.lblDollarSign.Name = "lblDollarSign";
             this.lblDollarSign.Size = new System.Drawing.Size(13, 13);
             this.lblDollarSign.TabIndex = 9;
@@ -125,7 +135,7 @@
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(15, 153);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(228, 16);
+            this.lblError.Size = new System.Drawing.Size(228, 42);
             this.lblError.TabIndex = 10;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -133,7 +143,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 210);
+            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.ClientSize = new System.Drawing.Size(413, 236);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblDollarSign);
             this.Controls.Add(this.lblOutput);

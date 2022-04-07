@@ -35,9 +35,14 @@
             this.rtbDice2 = new System.Windows.Forms.RichTextBox();
             this.lblBankAccount = new System.Windows.Forms.Label();
             this.txtBetAmount = new System.Windows.Forms.TextBox();
-            this.lblOutput = new System.Windows.Forms.Label();
             this.lblDollarSign = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
+            this.grpBetChoice = new System.Windows.Forms.GroupBox();
+            this.radDoubles = new System.Windows.Forms.RadioButton();
+            this.radNotDoubles = new System.Windows.Forms.RadioButton();
+            this.radOddSum = new System.Windows.Forms.RadioButton();
+            this.radEvenSum = new System.Windows.Forms.RadioButton();
+            this.grpBetChoice.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtbDice
@@ -100,7 +105,6 @@
             this.lblBankAccount.Size = new System.Drawing.Size(25, 13);
             this.lblBankAccount.TabIndex = 6;
             this.lblBankAccount.Text = "100";
-            this.lblBankAccount.Click += new System.EventHandler(this.lblBankAccount_Click);
             // 
             // txtBetAmount
             // 
@@ -111,14 +115,6 @@
             this.txtBetAmount.Size = new System.Drawing.Size(133, 20);
             this.txtBetAmount.TabIndex = 7;
             this.txtBetAmount.Text = "Type Bet Here";
-            // 
-            // lblOutput
-            // 
-            this.lblOutput.Location = new System.Drawing.Point(284, 37);
-            this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(113, 158);
-            this.lblOutput.TabIndex = 8;
-            this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDollarSign
             // 
@@ -139,15 +135,72 @@
             this.lblError.TabIndex = 10;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // grpBetChoice
+            // 
+            this.grpBetChoice.Controls.Add(this.radEvenSum);
+            this.grpBetChoice.Controls.Add(this.radOddSum);
+            this.grpBetChoice.Controls.Add(this.radNotDoubles);
+            this.grpBetChoice.Controls.Add(this.radDoubles);
+            this.grpBetChoice.Location = new System.Drawing.Point(252, 55);
+            this.grpBetChoice.Name = "grpBetChoice";
+            this.grpBetChoice.Size = new System.Drawing.Size(145, 140);
+            this.grpBetChoice.TabIndex = 11;
+            this.grpBetChoice.TabStop = false;
+            this.grpBetChoice.Text = "Bet Choice";
+            // 
+            // radDoubles
+            // 
+            this.radDoubles.AutoSize = true;
+            this.radDoubles.Location = new System.Drawing.Point(20, 32);
+            this.radDoubles.Name = "radDoubles";
+            this.radDoubles.Size = new System.Drawing.Size(64, 17);
+            this.radDoubles.TabIndex = 0;
+            this.radDoubles.TabStop = true;
+            this.radDoubles.Text = "Doubles";
+            this.radDoubles.UseVisualStyleBackColor = true;
+            // 
+            // radNotDoubles
+            // 
+            this.radNotDoubles.AutoSize = true;
+            this.radNotDoubles.Location = new System.Drawing.Point(20, 56);
+            this.radNotDoubles.Name = "radNotDoubles";
+            this.radNotDoubles.Size = new System.Drawing.Size(84, 17);
+            this.radNotDoubles.TabIndex = 1;
+            this.radNotDoubles.TabStop = true;
+            this.radNotDoubles.Text = "Not Doubles";
+            this.radNotDoubles.UseVisualStyleBackColor = true;
+            // 
+            // radOddSum
+            // 
+            this.radOddSum.AutoSize = true;
+            this.radOddSum.Location = new System.Drawing.Point(20, 78);
+            this.radOddSum.Name = "radOddSum";
+            this.radOddSum.Size = new System.Drawing.Size(66, 17);
+            this.radOddSum.TabIndex = 2;
+            this.radOddSum.TabStop = true;
+            this.radOddSum.Text = "OddSum";
+            this.radOddSum.UseVisualStyleBackColor = true;
+            // 
+            // radEvenSum
+            // 
+            this.radEvenSum.AutoSize = true;
+            this.radEvenSum.Location = new System.Drawing.Point(20, 102);
+            this.radEvenSum.Name = "radEvenSum";
+            this.radEvenSum.Size = new System.Drawing.Size(74, 17);
+            this.radEvenSum.TabIndex = 3;
+            this.radEvenSum.TabStop = true;
+            this.radEvenSum.Text = "Even Sum";
+            this.radEvenSum.UseVisualStyleBackColor = true;
+            // 
             // DiceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(413, 236);
+            this.Controls.Add(this.grpBetChoice);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblDollarSign);
-            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.txtBetAmount);
             this.Controls.Add(this.lblBankAccount);
             this.Controls.Add(this.rtbDice2);
@@ -157,6 +210,8 @@
             this.Controls.Add(this.rtbDice);
             this.Name = "DiceGame";
             this.Text = "Part 5 - Dice Game";
+            this.grpBetChoice.ResumeLayout(false);
+            this.grpBetChoice.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,9 +226,13 @@
         private System.Windows.Forms.RichTextBox rtbDice2;
         private System.Windows.Forms.Label lblBankAccount;
         private System.Windows.Forms.TextBox txtBetAmount;
-        private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.Label lblDollarSign;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.GroupBox grpBetChoice;
+        private System.Windows.Forms.RadioButton radEvenSum;
+        private System.Windows.Forms.RadioButton radOddSum;
+        private System.Windows.Forms.RadioButton radNotDoubles;
+        private System.Windows.Forms.RadioButton radDoubles;
     }
 }
 

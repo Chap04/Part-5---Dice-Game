@@ -41,18 +41,63 @@ namespace Part_5___Dice_Game
                 if (betAmount <= bankAccount && betAmount > 0)
                 {
                     bankAccountRun = bankAccount - betAmount;
-                    if (die1 == die2)
+                    if (radDoubles.Checked == true)
                     {
-                        payReturn = betAmount * 2;
-                        bankAccount = (bankAccountRun + payReturn);
-                        lblBankAccount.Text = bankAccount + "";
+                        if (die1 == die2)
+                        {
+                            payReturn = betAmount * 2;
+                            bankAccount = (bankAccountRun + payReturn);
+                            lblBankAccount.Text = bankAccount + "";
+                        }
+                        else if (die1 != die2)
+                        {
+                            bankAccount = bankAccountRun;
+                            lblBankAccount.Text = bankAccount + "";
+                        }
                     }
-                    else if (die1 != die2)
+                    else if (radNotDoubles.Checked == true)
                     {
-                        payReturn = betAmount * 1.5;
-                        bankAccount = (bankAccountRun + payReturn);
-                        lblBankAccount.Text = bankAccount + "";
+                        if (die1 != die2)
+                        {
+                            payReturn = betAmount * 1.5;
+                            bankAccount = (bankAccountRun + payReturn);
+                            lblBankAccount.Text = bankAccount + "";
+                        }
+                        else if (die1 == die2)
+                        {
+                            bankAccount = bankAccountRun;
+                            lblBankAccount.Text = bankAccount + "";
+                        }
                     }
+                    else if (radEvenSum.Checked == true)
+                    {
+                        if ((die1 + die2) % 2 == 0)
+                        {
+                            payReturn = betAmount;
+                            bankAccount = (bankAccountRun + payReturn);
+                            lblBankAccount.Text = bankAccount + "";                             
+                        }
+                        else if ((die1 + die2) % 2 == 1)
+                        {
+                            bankAccount = bankAccountRun;
+                            lblBankAccount.Text = bankAccount + "";
+                        }
+                    }
+                    else if (radOddSum.Checked == true)
+                    {
+                        if ((die1 + die2) % 2 == 1)
+                        {
+                            payReturn = betAmount;
+                            bankAccount = (bankAccountRun + payReturn);
+                            lblBankAccount.Text = bankAccount + "";
+                        }
+                        else if ((die1 + die2) % 2 == 0)
+                        {
+                            bankAccount = bankAccountRun;
+                            lblBankAccount.Text = bankAccount + "";
+                        }
+                    }
+                    
                     lblError.Text = ("");
                 }
                 else
@@ -128,9 +173,6 @@ namespace Part_5___Dice_Game
         }
 
 
-        private void lblBankAccount_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     } 
 }
